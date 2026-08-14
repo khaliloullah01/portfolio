@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Ibrahima Khalilou-llah SYLLA, étudiant TDSI à l'UCAD Dakar : cybersécurité, systèmes, réseaux, développement web et intelligence artificielle.">
+  <meta name="theme-color" content="#090909">
+  <title>Ibrahima Khalilou-llah SYLLA | Portfolio</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=mono-dark-1">
+</head>
+<body>
+  <div id="loader" role="status" aria-label="Chargement du portfolio">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Chargement</p>
+  </div>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <nav class="navbar navbar-expand-xl navbar-dark fixed-top" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand" href="#accueil"><i class="fas fa-shield-halved"></i>Ibrahima Khalilou-llah SYLLA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Afficher la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ms-auto align-items-xl-center">
+          <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#web">Dev Web</a></li>
+          <li class="nav-item"><a class="nav-link" href="#systemes">Systèmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cybersecurite">Cybersécurité</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cryptographie">Cryptographie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#datascience">IA & Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formation">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="accueil">
+      <div class="container position-relative" style="z-index: 1;">
+        <div class="row align-items-center min-vh-100 py-5 gy-5 hero-content">
+          <div class="col-lg-7 order-2 order-lg-1">
+            <p class="text-uppercase mb-3" style="color: var(--accent-cyan); letter-spacing: 2px;">Portfolio de Monsieur</p>
+            <h1 class="hero-name">Ibrahima Khalilou-llah <span>SYLLA</span></h1>
+            <p class="hero-title">Étudiant en Licence 3 - Transmission de Données et Sécurité de l'Information</p>
+            <p class="hero-university"><i class="fas fa-graduation-cap me-2"></i>École Supérieure de Transmission de Données, UCAD Dakar</p>
+            <p class="typing-container">Je développe mes compétences en <span id="typing-text" class="typing-text" aria-live="polite"></span></p>
+            <div class="hero-buttons">
+              <div class="dropdown cv-download-menu">
+                <button class="btn-custom btn-outline-custom dropdown-toggle" type="button" id="cv-menu-button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-download"></i> Télécharger mon CV
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="cv-menu-button">
+                  <li><a class="dropdown-item" href="assets/cv/CV_Ibrahima_Sylla_Cybersecurite.pdf" download><i class="fas fa-shield-halved"></i><span><strong>Cybersécurité & cryptographie</strong><small>Infrastructure, audit et sécurité</small></span></a></li>
+                  <li><a class="dropdown-item" href="assets/cv/CV_Ibrahima_Sylla_Developpement_Web.pdf" download><i class="fas fa-code"></i><span><strong>Développement web</strong><small>Front-end, back-end et API</small></span></a></li>
+                  <li><a class="dropdown-item" href="assets/cv/CV_Ibrahima_Sylla_Data_Science_IA.pdf" download><i class="fas fa-brain"></i><span><strong>Data Science & IA</strong><small>Données, Python et intégration IA</small></span></a></li>
+                  <li><a class="dropdown-item" href="assets/cv/CV_Ibrahima_Sylla_Systemes_Reseaux.pdf" download><i class="fas fa-network-wired"></i><span><strong>Systèmes & réseaux</strong><small>Linux, services et infrastructure</small></span></a></li>
+                </ul>
+              </div>
+              <a href="#projets" class="btn-custom btn-primary-custom"><i class="fas fa-folder-open"></i> Voir mes projets</a>
+              <a href="#contact" class="btn-custom btn-outline-custom"><i class="fas fa-paper-plane"></i> Me contacter</a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 text-center">
+            <img class="hero-photo" src="img/WhatsApp Image 2026-08-08 at 09.46.59.jpeg" alt="Portrait de Ibrahima Khalilou-llah SYLLA">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-user-shield me-2"></i>À propos</h2>
+          <div class="section-line"></div>
+          <p>Un profil polyvalent, orienté systèmes d'information sécurisés.</p>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 reveal">
+            <div class="glass-card about-profile">
+              <img src="img/WhatsApp Image 2026-08-08 at 09.46.59.jpeg" alt="Portrait de Ibrahima Khalilou-llah SYLLA">
+              <h3>Ibrahima Khalilou-llah SYLLA</h3>
+              <p>Dakar, Sénégal · Mathématiques, Cryptographie et Sécurité informatique</p>
+              <div>
+                <span class="quality-tag"><i class="fas fa-users"></i> Esprit d'équipe</span>
+                <span class="quality-tag"><i class="fas fa-compass"></i> Adaptabilité</span>
+                <span class="quality-tag"><i class="fas fa-check-double"></i> Rigueur</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal reveal-delay-1">
+            <div class="glass-card h-100">
+              <h3 class="mb-3" style="color:var(--accent-cyan)">Construire des systèmes utiles et résilients</h3>
+              <p>Étudiant en TDSI, je consolide un socle en administration Linux, réseaux, développement web, bases de données et cryptographie. Mes projets me permettent d'associer l'automatisation, la sécurité et l'exploitation des données.</p>
+              <p class="mb-0">Je m'intéresse particulièrement à la sécurité des infrastructures, aux IDS fondés sur le deep learning et à la robustesse adversariale. Mon objectif est de contribuer à des produits numériques fiables, accessibles et sécurisés.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline mt-5 reveal">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Aujourd'hui</span>
+              <h3 class="timeline-title">Licence 3 TDSI - UCAD Dakar</h3>
+              <p class="timeline-desc">Approfondissement des systèmes, réseaux, cybersécurité, IA et bases de données.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Projets académiques</span>
+              <h3 class="timeline-title">Laboratoires et challenges</h3>
+              <p class="timeline-desc">CTF, Open Data, infrastructures multi-VM et applications web sécurisées.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="web">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-code me-2"></i>Développement web</h2>
+          <div class="section-line"></div>
+          <p>Des interfaces responsives aux services connectés et sécurisés.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 reveal">
+            <div class="skill-category h-100">
+              <h3><i class="fas fa-laptop-code"></i> Front-end</h3>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">HTML5, CSS3 & Bootstrap 5</div>
+                  <div class="skill-desc">Intégration de pages sémantiques, responsive design, composants Bootstrap et interfaces accessibles.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="88%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">JavaScript ES6+</div>
+                  <div class="skill-desc">DOM, événements, async/await, classes, modules, stockage et requêtes Fetch.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="82%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Développement React</div>
+                  <div class="skill-desc">Création d'interfaces à composants et compréhension du développement front-end moderne.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="58%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal reveal-delay-1">
+            <div class="skill-category h-100">
+              <h3><i class="fas fa-server"></i> Back-end & API</h3>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-php"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">PHP & Laravel</div>
+                  <div class="skill-desc">Architecture client/serveur, formulaires, validation, sessions et logique métier côté serveur.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="76%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-plug"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">API REST & JSON</div>
+                  <div class="skill-desc">Consommation et intégration d'API, échanges JSON et connexion d'une API IA Llama 3.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Java & Jakarta EE</div>
+                  <div class="skill-desc">Bases Java, Servlets/JSP, JPA et compréhension des applications d'entreprise.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="62%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal reveal-delay-2">
+            <div class="skill-category h-100">
+              <h3><i class="fas fa-database"></i> Données & outils</h3>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">MySQL, SQL & PostgreSQL</div>
+                  <div class="skill-desc">Modélisation, requêtes SQL, jointures, transactions, vues et contrôle des accès.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="78%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Python & Data</div>
+                  <div class="skill-desc">Scripts, traitement de données et premiers cas d'usage en IA et détection d'anomalies.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Git, WAMP & XAMPP</div>
+                  <div class="skill-desc">Versioning, gestion de dépôts et environnements de développement local PHP/MySQL.</div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="systemes">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-network-wired me-2"></i>Systèmes & réseaux</h2>
+          <div class="section-line"></div>
+          <p>Conception, administration et automatisation d'infrastructures.</p>
+        </div>
+        <div class="competence-grid">
+          <article class="competence-card reveal">
+            <h4><i class="fab fa-linux"></i> Linux & services</h4>
+            <p>Administration Ubuntu Server et Red Hat, du paramétrage des accès au déploiement des services.</p>
+            <ul class="project-details">
+              <li>Utilisateurs, groupes, permissions, ACL, SSH et sudoers.</li>
+              <li>Apache, DNS, DHCP, Samba, Squid, vsftpd, Postfix et Dovecot.</li>
+              <li>Configuration réseau multi-interface et dépannage de services.</li>
+            </ul>
+          </article>
+          <article class="competence-card reveal reveal-delay-1">
+            <h4><i class="fas fa-diagram-project"></i> Réseaux Cisco</h4>
+            <p>Conception et configuration d'un réseau local segmenté et interconnecté.</p>
+            <ul class="project-details">
+              <li>VLAN, trunks 802.1Q et commutateurs de niveau 3.</li>
+              <li>Router-on-a-stick, routage inter-VLAN et routes statiques.</li>
+              <li>Lecture et configuration de Cisco IOS.</li>
+            </ul>
+          </article>
+          <article class="competence-card reveal reveal-delay-2">
+            <h4><i class="fas fa-cubes"></i> Virtualisation & DevOps</h4>
+            <p>Création d'environnements reproductibles et automatisation des tâches d'infrastructure.</p>
+            <ul class="project-details">
+              <li>Laboratoires multi-VM sous VirtualBox et VMware.</li>
+              <li>Versioning avec Git, GitHub et GitLab.</li>
+              <li>Playbooks Ansible et premières pratiques Docker.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="cybersecurite">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-shield-halved me-2"></i>Cybersécurité</h2>
+          <div class="section-line"></div>
+          <p>Une approche pratique, de l'audit au durcissement.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-cyan)"><i class="fas fa-lock me-2"></i>Sécurité web</h4>
+              <p>Protection des services exposés et réduction de leur surface d'attaque.</p>
+              <ul class="project-details">
+                <li>HTTPS, certificats SSL/TLS et redirection forcée.</li>
+                <li>Hardening Linux, politiques de mots de passe et contrôle d'accès.</li>
+                <li>Fail2Ban avec jails SSH/FTP vérifiées.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-purple)"><i class="fas fa-magnifying-glass me-2"></i>Audit & pentest</h4>
+              <p>Analyse de l'exposition des applications et services à travers des laboratoires pratiques.</p>
+              <ul class="project-details">
+                <li>Reconnaissance et analyse avec Nikto et OWASP ZAP.</li>
+                <li>Simulation de phishing avec Gophish et King Phisher.</li>
+                <li>Lecture des résultats et priorisation des corrections.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-pink)"><i class="fas fa-eye me-2"></i>SOC & CTF</h4>
+              <p>Montée en compétence par la détection, l'investigation et les challenges techniques.</p>
+              <ul class="project-details">
+                <li>IDS, analyse de journaux et gestion d'incidents.</li>
+                <li>Web exploitation, forensics, reverse engineering et pwn.</li>
+                <li>Cryptographie appliquée dans des contextes CTF.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="cryptographie">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-key me-2"></i>Cryptographie</h2>
+          <div class="section-line"></div>
+          <p>Les fondations mathématiques et les mécanismes de protection des données.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-cyan)">Chiffrement & hachage</h4>
+              <p>AES, DES/3DES, modes ECB/CBC/CTR, RSA, Diffie-Hellman, ElGamal, SHA-256, SHA-512 et HMAC.</p>
+            </div>
+          </div>
+          <div class="col-md-6 reveal reveal-delay-1">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-violet)">Certificats & mathématiques</h4>
+              <p>OpenSSL, CSR, TLS, signatures numériques, arithmétique modulaire, corps finis, algorithme d'Euclide et codes correcteurs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="datascience">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-brain me-2"></i>Data Science & intelligence artificielle</h2>
+          <div class="section-line"></div>
+          <p>Transformer les données en outils d'aide à la décision.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 reveal">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-cyan)"><i class="fas fa-robot me-2"></i>IA & Machine Learning</h4>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Détection d'anomalies</div>
+                  <div class="skill-desc">Isolation Forest et LSTM pour des cas d'usage de sécurité.</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">IA générative</div>
+                  <div class="skill-desc">Chatbots, intégration d'API et Llama 3.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal reveal-delay-1">
+            <div class="glass-card h-100">
+              <h4 style="color:var(--accent-violet)"><i class="fas fa-chart-line me-2"></i>Data, SIG & recherche</h4>
+              <p>Analyse et prétraitement de données, visualisation, Open Data, PostGIS et Leaflet. Intérêts de recherche : IDS par deep learning, sécurité de l'IA et robustesse adversariale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="projets">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-folder-open me-2"></i>Projets</h2>
+          <div class="section-line"></div>
+          <p>Réalisations académiques, challenges et expérimentations personnelles.</p>
+        </div>
+        <div class="project-filters reveal" aria-label="Filtrer les projets">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="cyber">Cybersécurité</button>
+          <button class="filter-btn" data-filter="sys">Systèmes</button>
+          <button class="filter-btn" data-filter="ia">IA & Data</button>
+          <button class="filter-btn" data-filter="db">Données</button>
+        </div>
+        <div class="row g-4" id="projects-grid">
+          <div class="col-md-6 col-lg-4 project-item" data-category="web ia">
+            <article class="project-card reveal">
+              <div class="project-content">
+                <span class="project-category">Web · IA</span>
+                <h3 class="project-title">tdsi.ai</h3>
+                <p class="project-desc">Plateforme académique conçue pour centraliser le programme TDSI et accompagner les étudiants dans leur apprentissage.</p>
+                <ul class="project-details">
+                  <li><strong>Objectif :</strong> proposer un assistant de révision accessible.</li>
+                  <li><strong>Fonctionnalités :</strong> chatbot IA, planification personnalisée et gestion des identités.</li>
+                  <li><strong>Réalisation :</strong> projet de fin de L2 mené sur quatre mois.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>HTML/CSS/JS</span>
+                  <span>PHP</span>
+                  <span>Llama 3</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="ia db web">
+            <article class="project-card reveal reveal-delay-1">
+              <div class="project-content">
+                <span class="project-category">Open Data · SIG</span>
+                <h3 class="project-title">TrustStat</h3>
+                <p class="project-desc">Projet soumis au Challenge Open Data 2026 de l'ANSD, réalisé en équipe de trois.</p>
+                <ul class="project-details">
+                  <li><strong>Objectif :</strong> calculer un indice de vulnérabilité sanitaire au Sénégal.</li>
+                  <li><strong>Approche :</strong> croiser mortalité, accès à l'eau/électricité et densité de population.</li>
+                  <li><strong>Impact visé :</strong> carte interactive et accès SMS/USSD pour les zones rurales.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>PostGIS</span>
+                  <span>Leaflet</span>
+                  <span>Open Data</span>
+                  <span>Cryptographie</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="cyber db">
+            <article class="project-card reveal reveal-delay-2">
+              <div class="project-content">
+                <span class="project-category">SOC · Base de données</span>
+                <h3 class="project-title">SentinelX</h3>
+                <p class="project-desc">Conception de la couche de données d'une plateforme SOC pour organiser et protéger les informations de sécurité.</p>
+                <ul class="project-details">
+                  <li><strong>Modèle :</strong> 12 tables et trois rôles applicatifs.</li>
+                  <li><strong>Sécurité :</strong> Row-Level Security, matrices de GRANT et transactions.</li>
+                  <li><strong>Technique :</strong> triggers, fonctions PL/pgSQL et débogage des droits.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>PostgreSQL</span>
+                  <span>PL/pgSQL</span>
+                  <span>RLS</span>
+                  <span>SQL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="sys cyber web">
+            <article class="project-card reveal">
+              <div class="project-content">
+                <span class="project-category">Systèmes · Sécurité</span>
+                <h3 class="project-title">Architecture LAMP distribuée</h3>
+                <p class="project-desc">Déploiement d'une architecture complète répartie sur plusieurs machines virtuelles.</p>
+                <ul class="project-details">
+                  <li><strong>Services :</strong> DNS, DHCP, serveur web Apache/PHP et MariaDB séparés.</li>
+                  <li><strong>Réseau :</strong> double adressage NAT interne et pont SSH.</li>
+                  <li><strong>Apport :</strong> administration et dépannage d'une infrastructure multi-VM.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Linux</span>
+                  <span>BIND9</span>
+                  <span>Apache</span>
+                  <span>MariaDB</span>
+                  <span>VirtualBox</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="cyber sys">
+            <article class="project-card reveal reveal-delay-1">
+              <div class="project-content">
+                <span class="project-category">Cybersécurité</span>
+                <h3 class="project-title">Services réseau sécurisés</h3>
+                <p class="project-desc">Laboratoire en sept phases consacré à la protection de services Linux courants.</p>
+                <ul class="project-details">
+                  <li><strong>Audit :</strong> Nikto et OWASP ZAP.</li>
+                  <li><strong>Durcissement :</strong> HTTPS forcé, FTP chrooté et Fail2Ban testé.</li>
+                  <li><strong>Services :</strong> Samba, Squid, Postfix et Dovecot.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Nikto</span>
+                  <span>OWASP ZAP</span>
+                  <span>Fail2Ban</span>
+                  <span>SSL/TLS</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="web">
+            <article class="project-card reveal reveal-delay-2">
+              <div class="project-content">
+                <span class="project-category">Développement web</span>
+                <h3 class="project-title">Clone e-Sénégal</h3>
+                <p class="project-desc">Reproduction responsive d'une interface de connexion pour consolider les fondamentaux du front-end.</p>
+                <ul class="project-details">
+                  <li><strong>Travail :</strong> intégration fidèle, mise en page et interactions sans framework.</li>
+                  <li><strong>Compétences :</strong> structure HTML, CSS responsive et manipulation du DOM.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="ia web">
+            <article class="project-card reveal">
+              <div class="project-content">
+                <span class="project-category">IA · Web</span>
+                <h3 class="project-title">Chatbot avec intégration d'API</h3>
+                <p class="project-desc">Assistant conversationnel web connecté à une API d'intelligence artificielle.</p>
+                <ul class="project-details">
+                  <li><strong>Travail :</strong> gestion des requêtes asynchrones et affichage dynamique des réponses.</li>
+                  <li><strong>Apport :</strong> mise en pratique de Fetch API et de la logique conversationnelle.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>JavaScript</span>
+                  <span>Fetch API</span>
+                  <span>API IA</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="sys cyber">
+            <article class="project-card reveal reveal-delay-1">
+              <div class="project-content">
+                <span class="project-category">DevOps · Systèmes</span>
+                <h3 class="project-title">Automatisation Ansible</h3>
+                <p class="project-desc">Pipeline de déploiement pour un laboratoire TDSI reproductible.</p>
+                <ul class="project-details">
+                  <li><strong>Automatisation :</strong> Apache/SSL, BIND9, DHCP, vsftpd, Samba et Squid.</li>
+                  <li><strong>Sécurité :</strong> intégration de Fail2Ban dans le déploiement.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Ansible</span>
+                  <span>Linux</span>
+                  <span>Apache</span>
+                  <span>Fail2Ban</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="web cyber db">
+            <article class="project-card reveal reveal-delay-2">
+              <div class="project-content">
+                <span class="project-category">Web · Sécurité</span>
+                <h3 class="project-title">FitTrack - suivi de données IMC</h3>
+                <p class="project-desc">Application full-stack de suivi d'IMC, conçue avec une attention particulière à la confidentialité et à l'intégrité des données.</p>
+                <ul class="project-details">
+                  <li><strong>Back-end :</strong> validation et traitement des entrées utilisateur côté serveur.</li>
+                  <li><strong>Protection :</strong> hachage SHA-256 et communications HTTPS.</li>
+                  <li><strong>Déploiement :</strong> environnement WAMP avec PHP et MySQL.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>PHP</span>
+                  <span>MySQL</span>
+                  <span>SHA-256</span>
+                  <span>HTTPS</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="cyber">
+            <article class="project-card reveal">
+              <div class="project-content">
+                <span class="project-category">Cryptographie</span>
+                <h3 class="project-title">Mécanismes cryptographiques avec OpenSSL</h3>
+                <p class="project-desc">Travaux pratiques dédiés à la sécurisation des échanges et à la gestion des certificats.</p>
+                <ul class="project-details">
+                  <li><strong>Algorithmes :</strong> génération de clés RSA et chiffrement/déchiffrement AES.</li>
+                  <li><strong>Intégrité :</strong> signatures numériques et hachage SHA-256.</li>
+                  <li><strong>Certificats :</strong> CSR et certificats SSL auto-signés.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>OpenSSL</span>
+                  <span>RSA</span>
+                  <span>AES</span>
+                  <span>SHA-256</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="sys cyber web">
+            <article class="project-card reveal reveal-delay-1">
+              <div class="project-content">
+                <span class="project-category">DevOps · Sécurité</span>
+                <h3 class="project-title">Pipeline CI/CD pour application web</h3>
+                <p class="project-desc">Automatisation du cycle d'intégration, de test et de déploiement sur Linux.</p>
+                <ul class="project-details">
+                  <li><strong>Pipeline :</strong> build, tests et déploiement après validation.</li>
+                  <li><strong>Déploiement :</strong> intégration Docker et mise à jour contrôlée du service.</li>
+                  <li><strong>Traçabilité :</strong> Git et accès serveur sécurisé par SSH.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Git</span>
+                  <span>CI/CD</span>
+                  <span>Docker</span>
+                  <span>SSH</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-category="sys web">
+            <article class="project-card reveal reveal-delay-2">
+              <div class="project-content">
+                <span class="project-category">Conteneurisation</span>
+                <h3 class="project-title">Déploiement Docker</h3>
+                <p class="project-desc">Conteneurisation d'une application web dans un environnement isolé.</p>
+                <ul class="project-details">
+                  <li><strong>Construction :</strong> image personnalisée avec Dockerfile.</li>
+                  <li><strong>Exploitation :</strong> gestion des volumes, réseaux et services applicatifs.</li>
+                  <li><strong>Sécurité :</strong> isolation de base et vérification du fonctionnement.</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Docker</span>
+                  <span>Linux</span>
+                  <span>HTTP/HTTPS</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="formation">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-graduation-cap me-2"></i>Formation & engagement</h2>
+          <div class="section-line"></div>
+          <p>Un apprentissage ancré dans la pratique et les communautés techniques.</p>
+        </div>
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026</span>
+              <h3 class="timeline-title">TDSI - UCAD Dakar</h3>
+              <p class="timeline-desc">Licence 3 en Transmission de Données et Sécurité de l'Information, parcours Mathématiques, Cryptographie et Sécurité informatique.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">En continu</span>
+              <h3 class="timeline-title">Hackathons, CTF & Open Data</h3>
+              <p class="timeline-desc">Participation à des challenges techniques, travaux collaboratifs et projets d'expérimentation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-address-card me-2"></i>Contact</h2>
+          <div class="section-line"></div>
+          <p>Disponible pour échanger autour d'un projet, d'un stage ou d'une collaboration.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-5 reveal">
+            <div class="glass-card h-100">
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:khaliloullahsylla@gmail.com">khaliloullahsylla@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <h4>Téléphone</h4>
+                  <a href="tel:+221784866068">+221 78 486 60 68</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h4>Localisation</h4>
+                  <p>Dakar, Sénégal</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                <div>
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/khaliloullah01" target="_blank" rel="noopener">github.com/khaliloullah01</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/khalilou-llah-sylla-96251034a" target="_blank" rel="noopener">linkedin.com/in/khalilou-llah-sylla-96251034a</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal reveal-delay-1">
+            <div class="glass-card">
+              <h3 class="mb-4" style="color:var(--accent-cyan)"><i class="fas fa-paper-plane me-2"></i>Envoyez-moi un message</h3>
+              <form id="contact-form" action="#" method="post">
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="visually-hidden" for="nom">Votre nom</label>
+                    <input id="nom" class="form-control-custom" name="nom" placeholder="Votre nom" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="visually-hidden" for="email">Votre email</label>
+                    <input id="email" class="form-control-custom" type="email" name="email" placeholder="Votre email" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="visually-hidden" for="sujet">Sujet</label>
+                  <input id="sujet" class="form-control-custom" name="sujet" placeholder="Sujet" required>
+                </div>
+                <div class="mb-4">
+                  <label class="visually-hidden" for="message">Votre message</label>
+                  <textarea id="message" class="form-control-custom" name="message" placeholder="Votre message..." required></textarea>
+                </div>
+                <button class="btn-custom btn-primary-custom w-100 justify-content-center" type="submit"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-brand"><i class="fas fa-shield-halved"></i> Ibrahima Khalilou-llah SYLLA</div>
+      <p style="color:var(--text-secondary);max-width:600px;margin:0 auto 20px">Cybersécurité · Systèmes & réseaux · Développement web · IA & Data</p>
+      <div class="footer-social">
+        <a href="mailto:khaliloullahsylla@gmail.com" aria-label="Envoyer un email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/khaliloullah01" target="_blank" rel="noopener" aria-label="Profil GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/khalilou-llah-sylla-96251034a" target="_blank" rel="noopener" aria-label="Profil LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="tel:+221784866068" aria-label="Appeler Ibrahima Khalilou-llah SYLLA"><i class="fas fa-phone"></i></a>
+      </div>
+      <div class="footer-copy">© 2026 Ibrahima Khalilou-llah SYLLA. UCAD, FST, TDSI.</div>
+    </div>
+  </footer>
+  <button id="back-to-top" type="button" title="Retour en haut" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js?v=warm-1"></script>
+</body>
+</html>
